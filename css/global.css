@@ -222,14 +222,14 @@ h2 {
 }
 
 /* CHARACTERS */
-.char {
+.pic {
   position: relative;
   display: inline-block;
 }
-.char img {
+.pic img {
   width: 140px;
 }
-.char:hover:before {
+.pic:hover:before {
   font-size: 90px;
   color: #fff;
   position: absolute;
@@ -239,7 +239,7 @@ h2 {
 }
 
 /* JUSTICE LEAGUE */
-.jl .char:hover:before {
+.jl .pic:hover:before {
   content: "✌";
 }
 .jl .members {
@@ -249,10 +249,20 @@ h2 {
 }
 
 /* VILLAINS */
-.crime .char:hover:before {
+.crime .pic:hover:before {
   content: "☹";
 }
 .crime .villains {
+  margin-bottom: 20px;
+  width: 75%;
+  text-align: left;
+}
+
+/* PORTRAYERS */
+.portrayers .pic:hover:before {
+  content: "%";
+}
+.portrayers .faces {
   margin-bottom: 20px;
   width: 75%;
   text-align: left;
