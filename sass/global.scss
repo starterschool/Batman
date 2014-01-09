@@ -1,0 +1,251 @@
+/* GENERAL */
+
+body {
+    font-size: 18px;
+    font-family: "Alegreya", Georgia, serif;
+    line-height: 1.4;
+}
+
+a {
+    color: #1C2630;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+// Clearfix
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* HEADER */
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    padding: 20px 30px;
+    border-radius: 0 0 10px 10px;
+    background: #1C2630;
+    color: white;
+    text-align: center;
+}
+
+header .nav li {
+    display: block;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 1;
+}
+
+.nav li {
+    display: inline-block;
+    padding: 1px 8px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: rgba(255,255,255,.75);
+    text-decoration: none;
+}
+
+.nav li:before {
+    content: "✦ ";
+    font-size: 10px;
+    position: relative;
+    top: -2px;
+    left: -1px;
+    opacity: .7;
+}
+
+.nav li a:hover {
+    color:white;
+}
+
+.me {
+    margin-bottom: 20px;
+}
+
+.me img {
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 25px 0;
+    border-top: 3px solid #f7f7f7;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+h2 {
+    float: left;
+    margin-bottom: .8em;
+    width: 25%;
+    color: #4D5D6F;
+    text-align: left;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.readmore {
+    padding-top: 12px;
+}
+
+.readmore a {
+    position: relative;
+    padding: 4px 10px;
+    border: 1px solid #4D5D6F;
+    border-radius: 12px;
+    color: #4D5D6F;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 1;
+    opacity: .7;
+    transition: all 200ms ease-in;
+}
+
+.readmore a:hover {
+    background: #4D5D6F;
+    color: white;
+    opacity: 1;
+}
+
+/* FRIENDS */
+
+.friends ul {
+    margin-bottom: 20px;
+    float: left;
+    width: 720px;
+}
+
+.friends li {
+    float: left;
+    margin-right: 5%;
+    padding-bottom: 8px;
+    width: 30%;
+    border-radius: 12px;
+    background-color: #f7f7f7;
+    background-position: 0 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.friends li:first-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.friends li:last-child {
+    margin-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.friends li img {
+    margin-bottom: 8px;
+    border-radius: 12px 12px 0 0;
+}
+
+.friends li b {
+    display: block;
+    font-weight: bold;
+}
+
+.friends li i {
+    color: #666;
+    font-style: italic;
+}
+
+/* JUSTICE LEAGUE */
+
+.jl img {
+    width: 140px;
+}
+
+.jl .members {
+    float: left;
+    width: 720px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* VILLAINS */
+
+.crime img {
+    width: 140px;
+}
+
+.crime .villains {
+    float: left;
+    width: 720px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* CONTACT */
+
+.contact form {
+    float: left;
+    width: 720px;
+    text-align: left;
+}
+
+.contact textarea {
+    margin: 0;
+    width: 99%;
+    height: 100px;
+    border: 1px solid #999;
+}
+
+.contact button {
+    margin: 0;
+    padding: 5px 8px;
+    border: #f7f7f7;
+    border-radius: 4px;
+    font-size: 20px;
+    font-size: 16px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer .copyright {
+    float: right;
+    text-align: right;
+}
+
+footer nav {
+    float: left;
+    text-align: left;
+}
+
+footer nav a {
+    font-size: 16px;
+    margin-right: 10px;
+    border-bottom: 1px solid #ddd;
+}

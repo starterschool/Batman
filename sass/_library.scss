@@ -1,0 +1,16 @@
+@mixin rounded-corners($variable: 6px) {
+    -webkit-border-radius: $variable;
+    -moz-border-radius: $variable;
+    -o-border-radius: $variable;
+    border-radius: $variable;
+}
+
+@mixin arrow-up($color:black, $thickness:6px) {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-color: transparent transparent $color transparent;
+    border-style: solid;
+    border-width: $thickness;
+}
