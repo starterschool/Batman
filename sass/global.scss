@@ -31,14 +31,15 @@ img {
 
 // Clearfix
 .group:after {
-    content: "";
     display: table;
     clear: both;
+    content: "";
 }
 
 /* HEADER */
 
 header {
+    @include rounded-corners(0 0 $corner-radius $corner-radius);
     position: absolute;
     top: 0px;
     left: 40px;
@@ -46,7 +47,6 @@ header {
     background: fade-out($dark-blue,.5);
     color: white;
     text-align: center;
-    @include rounded-corners(0 0 $corner-radius $corner-radius);
 
     .nav li {
         display: block;
@@ -64,17 +64,17 @@ h1 {
     li {
         display: inline-block;
         padding: 1px 8px;
-        text-transform: uppercase;
-        font-size: 16px;
         color: rgba(255,255,255,.75);
         text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
 
         &:before {
-            content: "✦ ";
-            font-size: 10px;
             position: relative;
             top: -2px;
             left: -1px;
+            content: "✦ ";
+            font-size: 10px;
             opacity: .7;
         }
 
@@ -105,7 +105,6 @@ section {
 $col1: 25%;
 
 h2 {
-    float: left;
     margin-bottom: .8em;
     width: $col1;
     color: $blue;
@@ -144,12 +143,10 @@ h2 {
 .friends {
     ul {
         margin-bottom: 20px;
-        float: left;
         width: 720px;
     }
 
     li {
-        float: left;
         margin-right: 5%;
         padding-bottom: 8px;
         width: 30%;
@@ -179,8 +176,8 @@ h2 {
         }
 
         img {
-            margin-bottom: 8px;
             @include rounded-corners($corner-radius $corner-radius 0 0);
+            margin-bottom: 8px;
         }
 
         b {
@@ -203,10 +200,9 @@ h2 {
     }
 
     .members {
-        float: left;
+        margin-bottom: 20px;
         width: 100% - $col1;
         text-align: left;
-        margin-bottom: 20px;
     }
 }
 
@@ -218,10 +214,9 @@ h2 {
     }
 
     .villains {
-        float: left;
+        margin-bottom: 20px;
         width: 100% - $col1;
         text-align: left;
-        margin-bottom: 20px;
     }
 }
 
@@ -229,7 +224,6 @@ h2 {
 
 .contact {
     form {
-        float: left;
         width: 720px;
         text-align: left;
     }
@@ -259,26 +253,24 @@ footer {
     font-size: 14px;
 
     .copyright {
-        float: right;
         text-align: right;
     }
 
     nav {
-        float: left;
         text-align: left;
     }
 
     nav a {
-        font-size: 16px;
-        margin-right: 10px;
-        border-bottom: 1px solid #ddd;
-        padding-left: 16px;
         position: relative;
+        margin-right: 10px;
+        padding-left: 16px;
+        border-bottom: 1px solid #ddd;
+        font-size: 16px;
 
         &:before {
             @include arrow-up;
-            left: 0;
             top: 3px;
+            left: 0;
         }
     }
 }
