@@ -180,7 +180,6 @@ h2 {
 
         img {
             margin-bottom: 8px;
-            // border-radius: $corner-radius $corner-radius 0 0;
             @include rounded-corners($corner-radius $corner-radius 0 0);
         }
 
