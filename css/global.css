@@ -1,5 +1,59 @@
 @charset "UTF-8";
 /* GENERAL */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 body {
   font-size: 18px;
   font-family: "Alegreya", Georgia, serif;
@@ -7,7 +61,7 @@ body {
 }
 
 a {
-  color: #1C2630;
+  color: #1c2630;
   text-decoration: none;
 }
 
@@ -33,12 +87,14 @@ header {
   top: 0px;
   left: 40px;
   padding: 20px 30px;
-  border-radius: 0 0 10px 10px;
-  background: #1C2630;
+  background: rgba(28, 38, 48, 0.5);
   color: white;
   text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
 }
-
 header .nav li {
   display: block;
 }
@@ -58,7 +114,6 @@ h1 {
   color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
 }
-
 .nav li:before {
   content: "✦ ";
   font-size: 10px;
@@ -67,7 +122,6 @@ h1 {
   left: -1px;
   opacity: .7;
 }
-
 .nav li a:hover {
   color: white;
 }
@@ -75,7 +129,6 @@ h1 {
 .me {
   margin-bottom: 20px;
 }
-
 .me img {
   display: block;
   border-bottom: 1px solid #ddd;
@@ -93,7 +146,7 @@ h2 {
   float: left;
   margin-bottom: .8em;
   width: 25%;
-  color: #4D5D6F;
+  color: #4d5d6f;
   text-align: left;
   font-weight: bold;
   font-style: italic;
@@ -104,22 +157,20 @@ h2 {
 .readmore {
   padding-top: 12px;
 }
-
 .readmore a {
   position: relative;
   padding: 4px 10px;
-  border: 1px solid #4D5D6F;
+  border: 1px solid #7d90a5;
   border-radius: 12px;
-  color: #4D5D6F;
+  color: #7d90a5;
   text-transform: uppercase;
   font-size: 13px;
   line-height: 1;
   opacity: .7;
   transition: all 200ms ease-in;
 }
-
 .readmore a:hover {
-  background: #4D5D6F;
+  background: #7d90a5;
   color: white;
   opacity: 1;
 }
@@ -130,13 +181,12 @@ h2 {
   float: left;
   width: 720px;
 }
-
 .friends li {
   float: left;
   margin-right: 5%;
   padding-bottom: 8px;
   width: 30%;
-  border-radius: 12px;
+  border-radius: 10px;
   background-color: #f7f7f7;
   background-position: 0 0;
   background-size: 100%;
@@ -144,29 +194,31 @@ h2 {
   text-align: center;
   font-size: 20px;
   line-height: 1;
+  opacity: .8;
 }
-
+.friends li:hover {
+  opacity: 1;
+}
 .friends li:first-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-
 .friends li:last-child {
   margin-right: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-
 .friends li img {
   margin-bottom: 8px;
-  border-radius: 12px 12px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
 }
-
 .friends li b {
   display: block;
   font-weight: bold;
 }
-
 .friends li i {
   color: #666;
   font-style: italic;
@@ -176,10 +228,9 @@ h2 {
 .jl img {
   width: 140px;
 }
-
 .jl .members {
   float: left;
-  width: 720px;
+  width: 75%;
   text-align: left;
   margin-bottom: 20px;
 }
@@ -188,10 +239,9 @@ h2 {
 .crime img {
   width: 140px;
 }
-
 .crime .villains {
   float: left;
-  width: 720px;
+  width: 75%;
   text-align: left;
   margin-bottom: 20px;
 }
@@ -202,14 +252,12 @@ h2 {
   width: 720px;
   text-align: left;
 }
-
 .contact textarea {
   margin: 0;
   width: 99%;
   height: 100px;
   border: 1px solid #999;
 }
-
 .contact button {
   margin: 0;
   padding: 5px 8px;
@@ -225,19 +273,29 @@ footer {
   text-align: center;
   font-size: 14px;
 }
-
 footer .copyright {
   float: right;
   text-align: right;
 }
-
 footer nav {
   float: left;
   text-align: left;
 }
-
 footer nav a {
   font-size: 16px;
   margin-right: 10px;
   border-bottom: 1px solid #ddd;
+  padding-left: 16px;
+  position: relative;
+}
+footer nav a:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-color: transparent transparent black transparent;
+  border-style: solid;
+  border-width: 6px;
+  left: 0;
+  top: 3px;
 }
