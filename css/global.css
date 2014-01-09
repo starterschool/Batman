@@ -90,10 +90,7 @@ header {
   background: rgba(28, 38, 48, 0.5);
   color: white;
   text-align: center;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
 }
 header .nav li {
   display: block;
@@ -210,9 +207,6 @@ h2 {
 }
 .friends li img {
   margin-bottom: 8px;
-  -webkit-border-radius: 10px 10px 0 0;
-  -moz-border-radius: 10px 10px 0 0;
-  -o-border-radius: 10px 10px 0 0;
   border-radius: 10px 10px 0 0;
 }
 .friends li b {

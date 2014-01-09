@@ -1,7 +1,4 @@
 @mixin rounded-corners($variable: 6px) {
-    -webkit-border-radius: $variable;
-    -moz-border-radius: $variable;
-    -o-border-radius: $variable;
     border-radius: $variable;
 }
 
