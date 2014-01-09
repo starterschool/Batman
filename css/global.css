@@ -181,10 +181,9 @@ h2 {
 /* FRIENDS */
 .friends ul {
   margin-bottom: 20px;
-  width: 720px;
+  width: 75%;
 }
 .friends li {
-  margin-right: 5%;
   padding-bottom: 8px;
   width: 30%;
   border-radius: 10px;
@@ -222,9 +221,26 @@ h2 {
   font-style: italic;
 }
 
-/* JUSTICE LEAGUE */
-.jl img {
+/* CHARACTERS */
+.char {
+  position: relative;
+  display: inline-block;
+}
+.char img {
   width: 140px;
+}
+.char:hover:before {
+  font-size: 90px;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/* JUSTICE LEAGUE */
+.jl .char:hover:before {
+  content: "✌";
 }
 .jl .members {
   margin-bottom: 20px;
@@ -233,8 +249,8 @@ h2 {
 }
 
 /* VILLAINS */
-.crime img {
-  width: 140px;
+.crime .char:hover:before {
+  content: "☹";
 }
 .crime .villains {
   margin-bottom: 20px;
