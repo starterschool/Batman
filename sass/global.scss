@@ -46,7 +46,7 @@ header {
     background: fade-out($dark-blue,.5);
     color: white;
     text-align: center;
-    @include rounded-corners($corner-radius);
+    @include rounded-corners(0 0 $corner-radius $corner-radius);
 
     .nav li {
         display: block;
