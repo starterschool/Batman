@@ -1,5 +1,11 @@
-@mixin rounded-corners($variable: 6px) {
-    border-radius: $variable;
+@mixin rounded-corners($r: 6px) {
+    border-radius: $r;
+}
+
+@mixin bg-size($size: 100% auto) {
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    background-size: $size;
 }
 
 @mixin arrow-up($color:black, $thickness:6px) {
