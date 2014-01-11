@@ -33,7 +33,7 @@ img {
 }
 
 // Clearfix
-.group:after {
+%group:after {
     display: table;
     clear: both;
     content: "";
@@ -43,9 +43,9 @@ img {
 
 header {
     margin-bottom: 20px;
-    background-image: url(/img/batman.jpg);
-    height: 600px;
-    @include bg-size;
+    // background-image: url(/img/batman.jpg);
+    // height: 600px;
+    // @include bg-size;
 
     img {
         display: block;
@@ -55,14 +55,17 @@ header {
 
 .brand {
     @include rounded-corners(0 0 $corner-radius $corner-radius);
-    top: 0px;
-    left: 40px;
     padding: 20px 30px;
     margin-left: 30px;
     width: 250px;
     background: fade-out($dark-blue,.5);
     color: white;
     text-align: center;
+
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    z-index: 100;
 
     ul {
         li {
@@ -116,6 +119,7 @@ h2 {
     font-style: italic;
     font-size: 28px;
     line-height: 1;
+    float: left;
 }
 
 .readmore {
@@ -144,16 +148,23 @@ h2 {
 /* FRIENDS */
 
 .friends {
+    @extend .group;
+
     ul {
+        @extend .group;
+        float: left;
         margin-bottom: 20px;
         width: 75%;
+        font-size: 0;
+        text-align: left;
     }
 
     li {
+        vertical-align: top;
         padding-bottom: 8px;
-        width: 30%;
+        width: 20%;
         border-radius: $corner-radius;
-        background-color: #f7f7f7;
+        background-color: #999;
         background-position: 0 0;
         background-size: 100%;
         background-repeat: no-repeat;
@@ -161,6 +172,8 @@ h2 {
         font-size: 20px;
         line-height: 1;
         opacity: .8;
+        display: inline-block;
+
 
         &:hover {
             opacity: 1;
@@ -301,6 +314,12 @@ footer {
     padding: 20px 0;
     text-align: center;
     font-size: 14px;
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    background:white;
+    border-top: 2px solid #888;
+    width: 100%;
 
     .copyright {
         text-align: right;

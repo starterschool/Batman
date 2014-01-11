@@ -49,6 +49,7 @@ table {
 // Our own
 
 * {
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     background-repeat: no-repeat;
     background-position: 0 0;
