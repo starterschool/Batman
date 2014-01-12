@@ -81,6 +81,12 @@ img {
   position: relative;
 }
 
+.group:after, .friends:after, .friends ul:after, .jl:after, .crime:after, .portrayers:after, .contact:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
 /* HEADER */
 header {
   margin-bottom: 20px;
@@ -182,9 +188,10 @@ h2 {
 .friends li {
   vertical-align: top;
   padding-bottom: 8px;
-  width: 20%;
+  width: 31%;
+  margin-right: 3.5%;
   border-radius: 10px;
-  background-color: #999;
+  background-color: #ccc;
   background-position: 0 0;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -197,12 +204,14 @@ h2 {
 .friends li:hover {
   opacity: 1;
 }
-.friends li:first-child {
+.friends li:first-child, .friends li:first-child img {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 .friends li:last-child {
   margin-right: 0;
+}
+.friends li:last-child, .friends li:last-child img {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -220,14 +229,19 @@ h2 {
 }
 
 /* CHARACTERS */
-.pic {
+.jl .pics, .crime .pics, .portrayers .pics {
+  float: left;
+  margin-bottom: 20px;
+  width: 75%;
+  text-align: left;
+  font-size: 0;
+}
+.jl .pics a, .crime .pics a, .portrayers .pics a {
   position: relative;
   display: inline-block;
+  width: 20%;
 }
-.pic img {
-  width: 140px;
-}
-.pic:hover:before {
+.jl .pics a:hover:before, .crime .pics a:hover:before, .portrayers .pics a:hover:before {
   font-size: 90px;
   color: #fff;
   position: absolute;
@@ -240,35 +254,21 @@ h2 {
 .jl .pic:hover:before {
   content: "✌";
 }
-.jl .members {
-  margin-bottom: 20px;
-  width: 75%;
-  text-align: left;
-}
 
 /* VILLAINS */
 .crime .pic:hover:before {
   content: "☹";
-}
-.crime .villains {
-  margin-bottom: 20px;
-  width: 75%;
-  text-align: left;
 }
 
 /* PORTRAYERS */
 .portrayers .pic:hover:before {
   content: "%";
 }
-.portrayers .faces {
-  margin-bottom: 20px;
-  width: 75%;
-  text-align: left;
-}
 
 /* CONTACT */
 .contact form {
-  width: 720px;
+  float: left;
+  width: 75%;
   text-align: left;
 }
 .contact textarea {

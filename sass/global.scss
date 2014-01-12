@@ -33,7 +33,7 @@ img {
 }
 
 // Clearfix
-%group:after {
+.group:after {
     display: table;
     clear: both;
     content: "";
@@ -162,9 +162,10 @@ h2 {
     li {
         vertical-align: top;
         padding-bottom: 8px;
-        width: 20%;
+        width: 31%;
+        margin-right: 3.5%;
         border-radius: $corner-radius;
-        background-color: #999;
+        background-color: #ccc;
         background-position: 0 0;
         background-size: 100%;
         background-repeat: no-repeat;
@@ -174,20 +175,24 @@ h2 {
         opacity: .8;
         display: inline-block;
 
-
         &:hover {
             opacity: 1;
         }
 
         &:first-child {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
+            &, img {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
         }
 
         &:last-child {
             margin-right: 0;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
+
+            &, img {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
         }
 
         img {
@@ -209,22 +214,31 @@ h2 {
 
 /* CHARACTERS */
 
-.pic {
-    position: relative;
-    display: inline-block;
+%set {
+    @extend .group;
 
-    img {
-        width: 140px;
-    }
+    .pics {
+        float: left;
+        margin-bottom: 20px;
+        width: 100% - $col1;
+        text-align: left;
+        font-size: 0;
 
-    &:hover {
-        &:before {
-            font-size: 90px;
-            color: #fff;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            text-align: center;
+        a {
+            position: relative;
+            display: inline-block;
+            width: 20%;
+
+            &:hover {
+                &:before {
+                    font-size: 90px;
+                    color: #fff;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                }
+            }
         }
     }
 }
@@ -232,6 +246,8 @@ h2 {
 /* JUSTICE LEAGUE */
 
 .jl {
+    @extend %set;
+
     .pic {
         &:hover {
             &:before {
@@ -239,17 +255,13 @@ h2 {
             }
         }
     }
-
-    .members {
-        margin-bottom: 20px;
-        width: 100% - $col1;
-        text-align: left;
-    }
 }
 
 /* VILLAINS */
 
 .crime {
+    @extend %set;
+
     .pic {
         &:hover {
             &:before {
@@ -257,17 +269,13 @@ h2 {
             }
         }
     }
-
-    .villains {
-        margin-bottom: 20px;
-        width: 100% - $col1;
-        text-align: left;
-    }
 }
 
 /* PORTRAYERS */
 
 .portrayers {
+    @extend %set;
+
     .pic {
         &:hover {
             &:before {
@@ -275,19 +283,16 @@ h2 {
             }
         }
     }
-
-    .faces {
-        margin-bottom: 20px;
-        width: 100% - $col1;
-        text-align: left;
-    }
 }
 
 /* CONTACT */
 
 .contact {
+    @extend .group;
+
     form {
-        width: 720px;
+        float: left;
+        width: 100% - $col1;
         text-align: left;
     }
 
