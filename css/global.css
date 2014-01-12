@@ -323,3 +323,27 @@ footer nav a:before {
   top: 3px;
   left: 0;
 }
+
+@media screen and (max-width: 960px) {
+  .container {
+    width: auto;
+  }
+
+  h2 {
+    float: none;
+    width: auto;
+    text-align: center;
+  }
+
+  .readmore {
+    clear: both;
+  }
+
+  .jl .pics, .crime .pics, .portrayers .pics {
+    width: auto;
+    float: none;
+  }
+  .jl .pics a, .crime .pics a, .portrayers .pics a {
+    min-width: 100px;
+  }
+}
