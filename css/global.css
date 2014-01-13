@@ -75,7 +75,7 @@ img {
 
 .container {
   margin: 0 auto;
-  width: 960px;
+  max-width: 960px;
 }
 
 .main {
@@ -300,9 +300,11 @@ footer {
   width: 100%;
 }
 footer .copyright {
+  float: right;
   text-align: right;
 }
 footer nav {
+  float: left;
   text-align: left;
 }
 footer nav a {
@@ -322,4 +324,38 @@ footer nav a:before {
   border-width: 6px;
   top: 3px;
   left: 0;
+}
+
+@media screen and (max-width: 500px) {
+  h2 {
+    float: none;
+    width: auto;
+    text-align: center;
+  }
+
+  .readmore {
+    clear: both;
+  }
+
+  .brand {
+    margin: 0;
+    width: 100%;
+    position: static;
+    border-radius: 0;
+    background: #333;
+  }
+  .brand h1 {
+    font-size: 38px;
+  }
+
+  .friends ul {
+    width: 100%;
+  }
+
+  .jl .pics, .crime .pics, .portrayers .pics {
+    width: 100%;
+  }
+  .jl .pics a, .crime .pics a, .portrayers .pics a {
+    border-bottom: 3px solid black;
+  }
 }
