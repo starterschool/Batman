@@ -245,10 +245,12 @@ h2 {
 }
 
 @mixin hover-symbol($content) {
-    .pic {
-        &:hover {
-            &:before {
-                content: $content;
+    .pics {
+        a {
+            &:hover {
+                &:before {
+                    content: $content;
+                }
             }
         }
     }

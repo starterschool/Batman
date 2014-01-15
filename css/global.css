@@ -252,17 +252,17 @@ h2 {
 }
 
 /* JUSTICE LEAGUE */
-.jl .pic:hover:before {
+.jl .pics a:hover:before {
   content: "✌";
 }
 
 /* VILLAINS */
-.crime .pic:hover:before {
+.crime .pics a:hover:before {
   content: "☹";
 }
 
 /* PORTRAYERS */
-.portrayers .pic:hover:before {
+.portrayers .pics a:hover:before {
   content: "%";
 }
 
