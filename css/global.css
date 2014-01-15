@@ -201,6 +201,7 @@ h2 {
   line-height: 1;
   opacity: .8;
   display: inline-block;
+  margin: 0;
 }
 .friends li:hover {
   opacity: 1;

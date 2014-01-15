@@ -44,9 +44,6 @@ img {
 
 header {
     margin-bottom: 20px;
-    // background-image: url(/img/batman.jpg);
-    // height: 600px;
-    // @include bg-size;
 
     img {
         display: block;
@@ -175,6 +172,7 @@ h2 {
         line-height: 1;
         opacity: .8;
         display: inline-block;
+        margin: 0;
 
         &:hover {
             opacity: 1;
