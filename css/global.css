@@ -288,7 +288,7 @@ h2 {
 }
 
 /* FOOTER */
-footer {
+.footer {
   padding: 20px 0;
   text-align: center;
   font-size: 14px;
@@ -299,22 +299,22 @@ footer {
   border-top: 2px solid #888;
   width: 100%;
 }
-footer .copyright {
+.footer .copyright {
   float: right;
   text-align: right;
 }
-footer nav {
+.footer nav {
   float: left;
   text-align: left;
 }
-footer nav a {
+.footer nav a {
   position: relative;
   margin-right: 10px;
   padding-left: 16px;
   border-bottom: 1px solid #ddd;
   font-size: 16px;
 }
-footer nav a:before {
+.footer nav a:before {
   content: "";
   position: absolute;
   height: 0;
