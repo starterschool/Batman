@@ -254,17 +254,6 @@ h2 {
   text-align: center;
 }
 
-.icons-sprite, .test {
-  background: url('../img/icons-sa4526386e6.png') no-repeat;
-}
-
-.test {
-  height: 32px;
-  width: 32px;
-  display: inline-block;
-  background-position: 0 -280px;
-}
-
 /* JUSTICE LEAGUE */
 .jl .pics a:hover:before {
   content: "✌";
